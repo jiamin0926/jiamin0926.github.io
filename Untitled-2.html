@@ -3,604 +3,477 @@
 	Miniport by HTML5UP - html5up.net | @ajlkn
 -->
 <html>
-	<head>
-		<title>陈佳敏 - 个人作品集</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="./assets/css/main.css" />
-		<style>
-			
-			/* 给所有作品图片加圆角、阴影和过渡效果 */
-			#nav {
-    position: fixed;
-    z-index: 10000;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.75); /* 白色半透明毛玻璃 */
-    backdrop-filter: blur(10px); /* 模糊效果（毛玻璃） */
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    padding: 10px 0;
-}
-#nav ul {
-    margin: 0;
-    text-align: center;
-}
-#nav li {
-    display: inline-block;
-    margin: 0 15px;
-}
-#nav a {
-    display: block;
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-#nav a:hover {
-    color: #e58a8a; /* 悬停变色 */
-    transform: translateY(-2px); /* 轻微上浮 */
-}
-#portfolio .box.style2 .slider img {
-    border-radius: 10px; /* 圆角 */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* 轻微阴影 */
-    transition: transform 0.3s ease; /* 动画过渡 */
-}
+<head>
+	<title>陈佳敏 - 个人作品集</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="./assets/css/main.css" />
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&display=swap');
+		* { font-family: 'Noto Sans SC', sans-serif !important; }
 
-/* 鼠标悬停稍微放大，增加互动感 */
-#portfolio .box.style2 .slider img:hover {
-    transform: scale(1.02);
-}
-/* 引入一个文艺风的谷歌字体（例如：思源黑体或者更精致的字体） */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&display=swap')
-			/* 轮播图样式 */
-			.slider {
-				position: relative;
-				width: 100%;
-				overflow: hidden;
-				border-radius: 8px;
-				margin-bottom: 12px;
-			}
-			.slide {
-				display: none;
-				width: 100%;
-				animation: fade 0.8s;
-			}
-			.slide img {
-				width: 100%;
-				display: block;
-			}
-			@keyframes fade {
-				from {opacity: 0.4;}
-				to {opacity: 1;}
-			}
-
-			/* 技能模块左对齐 */
-			.box.style1 {
-				text-align: left !important;
-			}
-			.box.style1 ul {
-				list-style-type: disc !important;
-				padding-left: 25px !important;
-				margin: 10px 0 !important;
-				text-align: left !important;
-			}
-			.box.style1 ul li {
-				margin: 8px 0 !important;
-				text-align: left !important;
-				white-space: normal !important;
-			}
-
-			/* 作品左对齐 */
-			#portfolio .box.style2 {
-				text-align: left !important;
-			}
-
-			/* 竖屏 9:16 视频 */
-			.video-9-16 {
-				width: 100%;
-				max-width: 380px;
-				aspect-ratio: 9/16;
-				object-fit: cover;
-				border-radius: 12px;
-				margin: 0 auto;
-				display: block;
-			}
-
-			/* 横屏 16:9 视频 */
-			.video-16-9 {
-				width: 100%;
-				max-width: 800px;
-				aspect-ratio: 16/9;
-				object-fit: cover;
-				border-radius: 12px;
-				margin: 0 auto;
-				display: block;
-			}
-
-			.video-section {
-				text-align: center;
-				margin: 50px 0 30px 0;
-			}
-			.video-section h3 {
-				margin-bottom: 20px;
-				font-size: 1.4em;
-			}
-			/* 1. 全局页面底色 */
-body {
-  background: #ffffff !important;
-  color: #333333 !important;
-}
-
-/* 2. 首页自我介绍板块 #top */
-.wrapper.style1 {
-  background: #fef4f4 !important;
-}
-
-/* 3. 我的技能板块 #work */
-.wrapper.style2 {
-  background: #ffffff !important;
-}
-
-/* 4. 作品展示+视频板块 #portfolio */
-.wrapper.style3 {
-  background: #fdeeee !important;
-}
-
-/* 5. 底部微信联系版权板块 */
-.wrapper.style4 {
-  background: #fef4f4 !important;
-}
-
-/* 6. 按钮统一柔粉美化 */
-.button {
-  background: #e5aaaa !important;
-  border-color: #e5aaaa !important;
-  color: #fff !important;
-}
-.button:hover {
-  background: #d99494 !important;
-}
-
-/* 7. 技能小卡片底色柔和一点 */
-.box.style1 {
-  background: #fff9f9 !important;
-}
-		</style>
-	</head>
-	<body class="is-preload">
-     
-		<!-- 导航 -->
-			<nav id="nav">
-				<ul class="container">
-					<li><a href="#top">首页</a></li>
-					<li><a href="#work">我的技能</a></li>
-					<li><a href="#portfolio">作品展示</a></li>
-					<li><a href="#contact">联系我</a></li>
-				</ul>
-			</nav>
-
-		<!-- 首页 -->
-			<article id="top" class="wrapper style1">
-				<div class="container">
-					<div class="row">
-						<div class="col-4 col-5-large col-12-medium">
-							<span class="image fit"><img src="./images/pic00.jpg" alt="陈佳敏" /></span>
-						</div>
-						<div class="col-8 col-7-large col-12-medium">
-							<header>
-								<h1>你好，我是 <strong>陈佳敏</strong>。</h1>
-							</header>
-							<p>22岁 | 汉语言文学专业 | 大四<br>擅长：社群运营、文案策划、小红书公众号运营、AI创作与设计、自动化工作流</p>
-							<a href="#work" class="button large scrolly">了解我的能力</a>
-						</div>
-					</div>
-				</div>
-			</article>
-
-		<!-- 技能 -->
-			<article id="work" class="wrapper style2">
-				<div class="container">
-					<header>
-						<h2>我的核心技能</h2>
-						<p>汉语言文学专业，擅长内容创作与新媒体运营，熟练使用AI工具提升效率</p>
-					</header>
-					<div class="row aln-center">
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box style1">
-								<span class="icon featured fa-comments"></span>
-								<h3>社群&文案策划</h3>
-								<p>独立完成女装社群日销/直播内容框架、文案写作、互动活动策划。</p>
-							</section>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box style1">
-								<span class="icon solid featured fa-camera-retro"></span>
-								<h3>新媒体运营</h3>
-								<p>小红书穿搭图文、公众号排版编辑、评论私信管理、全流程制作。</p>
-							</section>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box style1">
-								<span class="icon featured fa-thumbs-up"></span>
-								<h3>AI创作与自动化</h3>
-								<p>AI漫剧/海报/视频生成，搭建自动化工作流、智能分析工具。</p>
-							</section>
-						</div>
-					</div>
-					<footer>
-						<p>查看我完整的项目作品</p>
-						<a href="#portfolio" class="button large scrolly">浏览我的作品集</a>
-					</footer>
-				</div>
-			</article>
-
-		<!-- 作品：2列排版 + 轮播 -->
-			<article id="portfolio" class="wrapper style3">
-				<div class="container">
-					<header>
-						<h2>我的项目作品</h2>
-						<p>涵盖运营、文案、设计、AI创作全方向实战案例</p>
-					</header>
-				<div class="row">
-
-    <!-- 作品1：社群运营 -->
-    <div class="col-6 col-12-medium">
-        <article class="box style2">
-            <div class="slider">
-                <div class="slide"><img src="./images/pic01.jpg"></div>
-                <div class="slide"><img src="./images/pic01-2.jpg"></div>
-                <div class="slide"><img src="./images/pic01-3.jpg"></div>
-                <div class="slide"><img src="./images/pic01-4.jpg"></div>
-            </div>
-            <h3>社群运营&文案策划</h3>
-            <p>女装社群日销/直播宣发全流程策划，文案写作、互动活动、一衣多搭分享。</p>
-        </article>
-    </div>
-
-    <!-- 作品2：小红书穿搭 -->
-    <div class="col-6 col-12-medium">
-        <article class="box style2">
-            <div class="slider">
-                <div class="slide"><img src="./images/pic02.jpg"></div>
-                <div class="slide"><img src="./images/pic02-2.jpg"></div>
-                <div class="slide"><img src="./images/pic02-3.jpg"></div>
-            </div>
-            <h3>小红书穿搭运营</h3>
-            <p>梨型/H型身材穿搭图文制作，场景化文案输出，拍照姿势与搭配技巧。</p>
-        </article>
-    </div>
-
-    <!-- 作品3：公众号内容（第二行 左） -->
-    <div class="col-6 col-12-medium">
-        <article class="box style2">
-            <div class="slider">
-                <div class="slide"><img src="./images/pic03.jpg"></div>
-                <div class="slide"><img src="./images/pic03-2.jpg"></div>
-            </div>
-            <h3>公众号内容制作</h3>
-            <p>原创推文排版、一衣多搭教程、直播预告、评论与私信管理。</p>
-        </article>
-    </div>
-
-    <!-- 作品5：AI电商海报（第二行 右） -->
-    <div class="col-6 col-12-medium">
-        <article class="box style2">
-            <div class="slider">
-                <div class="slide"><img src="./images/pic05.jpg"></div>
-                <div class="slide"><img src="./images/pic05-2.jpg"></div>
-            </div>
-            <h3>AI电商海报</h3>
-            <p>口红宣传广告、产品海报、AI模特图/视频创作。</p>
-        </article>
-    </div>
-
-    <!-- 作品4：AI漫剧&设计（第三行 左） -->
-    <div class="col-6 col-12-medium">
-        <article class="box style2">
-            <div class="slider">
-                <div class="slide"><img src="./images/pic04.jpg"></div>
-                <div class="slide"><img src="./images/pic04-2.jpg"></div>
-                <div class="slide"><img src="./images/pic04-3.jpg"></div>
-            </div>
-            <h3>AI漫剧&美术设计</h3>
-            <p>AI水墨人物立绘、漫剧创作、动作/舞蹈短片生成。</p>
-        </article>
-    </div>
-
-    <!-- 作品6：AI工作流（第三行 右） -->
-    <div class="col-6 col-12-medium">
-        <article class="box style2">
-            <div class="slider">
-                <div class="slide"><img src="./images/pic06.jpg"></div>
-                <div class="slide"><img src="./images/pic06-2.jpg"></div>
-            </div>
-            <h3>AI自动化工作流</h3>
-            <p>飞书新闻自动抓取、AI智能分析机器人、投资复盘工具。</p>
-        </article>
-    </div>
-
-</div>
-
-</div>
-
-					<!-- ===================== 视频区域开始 ===================== -->
-
-					<!-- 1. 竖屏 9:16 口红广告 -->
-					<div class="video-section">
-						<h3>AI口红宣传广告（9:16）</h3>
-						<video class="video-9-16" src="./images/kouhong.mp4" controls playsinline></video>
-					</div>
-
-					<!-- 2. 横屏 16:9 视频1 -->
-					<div class="video-section">
-						<h3>AI动作片 （16:9）</h3>
-						<video class="video-16-9" src="./images/video1.mp4" controls playsinline></video>
-					</div>
-
-					<!-- 3. 横屏 16:9 视频2 -->
-					<div class="video-section">
-						<h3>AI舞蹈短片 （16:9）</h3>
-						<video class="video-16-9" src="./images/video2.mp4" controls playsinline></video>
-					</div>
-
-					<!-- ===================== 视频区域结束 ===================== -->
-<!-- 原来的作品区footer，删掉，换成下面这段 -->
-<footer style="margin-top:60px;">
-    <hr />
-    <h3>微信联系</h3>
-    <div style="margin: 20px auto; text-align: center;">
-        <img 
-            src="./images/wechat.jpg" 
-            alt="微信二维码"
-            style="width: 220px; max-width: 90%; border-radius: 8px; display: block; margin: 0 auto;"
-        >
-    </div>
-    <hr />
-    <ul id="copyright">
-        <li>&copy; 陈佳敏 - 个人作品集 保留所有权利</li>
-        <li>设计: HTML5UP</li>
-    </ul>
-</footer>
-								<ul id="copyright">
-							<li>&copy; 陈佳敏 - 个人作品集 保留所有权利</li>
-							<li>设计: HTML5UP</li>
-						</ul>
-					</footer>
-				</div>
-			</article>
-
-		<!-- 轮播 -->
-		<script>
-		function startSliders() {
-			let sliders = document.querySelectorAll('.slider');
-			sliders.forEach((slider) => {
-				let slides = slider.querySelectorAll('.slide');
-				let index = 0;
-				function showSlide() {
-					slides.forEach(s => s.style.display = 'none');
-					slides[index].style.display = 'block';
-					index = (index + 1) % slides.length;
-				}
-				showSlide();
-				setInterval(showSlide, 2800);
-			});
+		/* ========== 导航毛玻璃 ========== */
+		#nav {
+			position: fixed;
+			z-index: 10000;
+			top: 0;
+			left: 0;
+			width: 100%;
+			background: rgba(255, 255, 255, 0.75);
+			backdrop-filter: blur(10px);
+			border-bottom: 1px solid rgba(0,0,0,0.1);
+			padding: 10px 0;
 		}
-		window.onload = startSliders;
-		</script>
+		#nav ul { margin: 0; text-align: center; }
+		#nav li { display: inline-block; margin: 0 15px; }
+		#nav a {
+			display: block;
+			color: #333;
+			text-decoration: none;
+			font-weight: bold;
+			transition: all 0.3s ease;
+		}
+		#nav a:hover {
+			color: #e58a8a;
+			transform: translateY(-2px);
+		}
 
-			<script src="./assets/js/jquery.min.js"></script>
-			<script src="./assets/js/jquery.scrolly.min.js"></script>
-			<script src="./assets/js/browser.min.js"></script>
-			<script src="./assets/js/breakpoints.min.js"></script>
-			<script src="./assets/js/util.js"></script>
-			<script src="./assets/js/main.js"></script>
-<!-- 捕梦网收集花朵特效（不影响内容点击） -->
+		/* ========== 作品图片美化 ========== */
+		#portfolio .box.style2 .slider img {
+			border-radius: 12px;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+			transition: transform 0.3s ease;
+		}
+		#portfolio .box.style2 .slider img:hover { transform: scale(1.03); }
+
+		/* ========== 轮播图样式 ========== */
+		.slider {
+			position: relative;
+			width: 100%;
+			overflow: hidden;
+			border-radius: 12px;
+			margin-bottom: 15px;
+		}
+		.slide {
+			display: none;
+			width: 100%;
+			animation: fade 0.8s;
+		}
+		.slide img { width: 100%; display: block; }
+		@keyframes fade { from {opacity: 0.4;} to {opacity: 1;} }
+
+		/* ========== 技能模块左对齐 ========== */
+		.box.style1 {
+			text-align: left !important;
+			background: #fff9f9 !important;
+		}
+		.box.style1 ul {
+			list-style-type: disc !important;
+			padding-left: 25px !important;
+			margin: 10px 0 !important;
+			text-align: left !important;
+		}
+		.box.style1 ul li {
+			margin: 8px 0 !important;
+			text-align: left !important;
+		}
+
+		/* ========== 作品左对齐 ========== */
+		#portfolio .box.style2 { text-align: left !important; }
+
+		/* ========== 视频样式 ========== */
+		.video-9-16 {
+			width: 100%;
+			max-width: 380px;
+			aspect-ratio: 9/16;
+			object-fit: cover;
+			border-radius: 12px;
+			margin: 0 auto;
+			display: block;
+		}
+		.video-16-9 {
+			width: 100%;
+			max-width: 800px;
+			aspect-ratio: 16/9;
+			object-fit: cover;
+			border-radius: 12px;
+			margin: 0 auto;
+			display: block;
+		}
+		.video-section {
+			text-align: center;
+			margin: 50px 0 30px 0;
+		}
+		.video-section h3 {
+			margin-bottom: 20px;
+			font-size: 1.4em;
+		}
+
+		/* ========== 全局配色 ========== */
+		body {
+			background: #ffffff !important;
+			color: #333333 !important;
+		}
+		.wrapper.style1 { background: #fef4f4 !important; }
+		.wrapper.style2 { background: #ffffff !important; }
+		.wrapper.style3 { background: #fdeeee !important; }
+		.wrapper.style4 { background: #fef4f4 !important; }
+
+		/* ========== 按钮美化 ========== */
+		.button {
+			background: #e5aaaa !important;
+			border-color: #e5aaaa !important;
+			color: #fff !important;
+			border-radius: 8px !important;
+		}
+		.button:hover { background: #d99494 !important; }
+
+		/* ========== 【核心修复】加载动画（视频版） ========== */
+		#loader {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			background: linear-gradient(135deg, #fef4f4 0%, #fdeeee 50%, #f8c8c8 100%);
+			z-index: 99999;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			transition: opacity 0.8s ease, visibility 0.8s ease;
+			opacity: 1;
+			visibility: visible;
+		}
+		#loader.hidden {
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+		}
+
+		/* 奔跑视频样式 */
+		.run-video {
+  width: 160px;
+  height: auto;
+  margin-bottom: 30px;
+  pointer-events: none;
+  /* 👇 核心：混合模式+背景色，直接过滤纯白 */
+  background: #fef4f4;
+  mix-blend-mode: multiply;
+  filter: brightness(1.05);
+}
+
+/* 手机适配 */
+@media (max-width: 768px) {
+  .run-video {
+    width: 120px;
+  }
+}
+
+		/* 进度条样式 */
+		#progressBarContainer {
+			width: 70%;
+			max-width: 550px;
+			height: 20px;
+			background: rgba(255,255,255,0.7);
+			border-radius: 10px;
+			overflow: hidden;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+		}
+		#progressBar {
+			height: 100%;
+			width: 0%;
+			background: linear-gradient(90deg, #f48fb1, #e594b7);
+			border-radius: 10px;
+			transition: width 0.1s linear;
+		}
+		#loaderText {
+			margin-top: 20px;
+			font-size: 16px;
+			color: #e594b7;
+			font-weight: 500;
+		}
+
+		/* 手机适配 */
+		@media (max-width: 768px) {
+			.run-video { width: 120px; }
+			#progressBarContainer { width: 85%; height: 18px; }
+			#loaderText { font-size: 14px; }
+		}
+	</style>
+</head>
+<body class="is-preload">
+
+<!-- ========== 【核心修复】加载动画结构（视频版） ========== -->
+<div id="loader">
+	<video class="run-video" autoplay loop muted playsinline>
+		<source src="./images/run-girl.mp4" type="video/mp4">
+	</video>
+	<div id="progressBarContainer">
+		<div id="progressBar"></div>
+	</div>
+	<div id="loaderText">正在加载佳敏的作品集...</div>
+</div>
+
+<!-- ========== 导航 ========== -->
+<nav id="nav">
+	<ul class="container">
+		<li><a href="#top">首页</a></li>
+		<li><a href="#work">我的技能</a></li>
+		<li><a href="#portfolio">作品展示</a></li>
+		<li><a href="#contact">联系我</a></li>
+	</ul>
+</nav>
+
+<!-- ========== 首页 ========== -->
+<article id="top" class="wrapper style1">
+	<div class="container">
+		<div class="row">
+			<div class="col-4 col-5-large col-12-medium">
+				<span class="image fit"><img src="./images/pic00.jpg" alt="陈佳敏" /></span>
+			</div>
+			<div class="col-8 col-7-large col-12-medium">
+				<header>
+					<h1>你好，我是 <strong>陈佳敏</strong>。</h1>
+				</header>
+				<p>22岁 | 汉语言文学专业 | 大四<br>擅长：社群运营、文案策划、小红书公众号运营、AI创作与设计、自动化工作流</p>
+				<a href="#work" class="button large scrolly">了解我的能力</a>
+			</div>
+		</div>
+	</div>
+</article>
+
+<!-- ========== 技能 ========== -->
+<article id="work" class="wrapper style2">
+	<div class="container">
+		<header>
+			<h2>我的核心技能</h2>
+			<p>汉语言文学专业，擅长内容创作与新媒体运营，熟练使用AI工具提升效率</p>
+		</header>
+		<div class="row aln-center">
+			<div class="col-4 col-6-medium col-12-small">
+				<section class="box style1">
+					<span class="icon featured fa-comments"></span>
+					<h3>社群&文案策划</h3>
+					<p>独立完成女装社群日销/直播内容框架、文案写作、互动活动策划。</p>
+				</section>
+			</div>
+			<div class="col-4 col-6-medium col-12-small">
+				<section class="box style1">
+					<span class="icon solid featured fa-camera-retro"></span>
+					<h3>新媒体运营</h3>
+					<p>小红书穿搭图文、公众号排版编辑、评论私信管理、全流程制作。</p>
+				</section>
+			</div>
+			<div class="col-4 col-6-medium col-12-small">
+				<section class="box style1">
+					<span class="icon featured fa-thumbs-up"></span>
+					<h3>AI创作与自动化</h3>
+					<p>AI漫剧/海报/视频生成，搭建自动化工作流、智能分析工具。</p>
+				</section>
+			</div>
+		</div>
+		<footer>
+			<p>查看我完整的项目作品</p>
+			<a href="#portfolio" class="button large scrolly">浏览我的作品集</a>
+		</footer>
+	</div>
+</article>
+
+<!-- ========== 作品展示 ========== -->
+<article id="portfolio" class="wrapper style3">
+	<div class="container">
+		<header>
+			<h2>我的项目作品</h2>
+			<p>涵盖运营、文案、设计、AI创作全方向实战案例</p>
+		</header>
+		<div class="row">
+			<div class="col-6 col-12-medium">
+				<article class="box style2">
+					<div class="slider">
+						<div class="slide"><img src="./images/pic01.jpg"></div>
+						<div class="slide"><img src="./images/pic01-2.jpg"></div>
+						<div class="slide"><img src="./images/pic01-3.jpg"></div>
+						<div class="slide"><img src="./images/pic01-4.jpg"></div>
+					</div>
+					<h3>社群运营&文案策划</h3>
+					<p>女装社群日销/直播宣发全流程策划，文案写作、互动活动、一衣多搭分享。</p>
+				</article>
+			</div>
+			<div class="col-6 col-12-medium">
+				<article class="box style2">
+					<div class="slider">
+						<div class="slide"><img src="./images/pic02.jpg"></div>
+						<div class="slide"><img src="./images/pic02-2.jpg"></div>
+						<div class="slide"><img src="./images/pic02-3.jpg"></div>
+					</div>
+					<h3>小红书穿搭运营</h3>
+					<p>梨型/H型身材穿搭图文制作，场景化文案输出，拍照姿势与搭配技巧。</p>
+				</article>
+			</div>
+			<div class="col-6 col-12-medium">
+				<article class="box style2">
+					<div class="slider">
+						<div class="slide"><img src="./images/pic03.jpg"></div>
+						<div class="slide"><img src="./images/pic03-2.jpg"></div>
+					</div>
+					<h3>公众号内容制作</h3>
+					<p>原创推文排版、一衣多搭教程、直播预告、评论与私信管理。</p>
+				</article>
+			</div>
+			<div class="col-6 col-12-medium">
+				<article class="box style2">
+					<div class="slider">
+						<div class="slide"><img src="./images/pic05.jpg"></div>
+						<div class="slide"><img src="./images/pic05-2.jpg"></div>
+					</div>
+					<h3>AI电商海报</h3>
+					<p>口红宣传广告、产品海报、AI模特图/视频创作。</p>
+				</article>
+			</div>
+			<div class="col-6 col-12-medium">
+				<article class="box style2">
+					<div class="slider">
+						<div class="slide"><img src="./images/pic04.jpg"></div>
+						<div class="slide"><img src="./images/pic04-2.jpg"></div>
+						<div class="slide"><img src="./images/pic04-3.jpg"></div>
+					</div>
+					<h3>AI漫剧&美术设计</h3>
+					<p>AI水墨人物立绘、漫剧创作、动作/舞蹈短片生成。</p>
+				</article>
+			</div>
+			<div class="col-6 col-12-medium">
+				<article class="box style2">
+					<div class="slider">
+						<div class="slide"><img src="./images/pic06.jpg"></div>
+						<div class="slide"><img src="./images/pic06-2.jpg"></div>
+					</div>
+					<h3>AI自动化工作流</h3>
+					<p>飞书新闻自动抓取、AI智能分析机器人、投资复盘工具。</p>
+				</article>
+			</div>
+		</div>
+
+		<!-- ========== 视频区域 ========== -->
+		<div class="video-section">
+			<h3>AI口红宣传广告（9:16）</h3>
+			<video class="video-9-16" src="./images/kouhong.mp4" controls playsinline></video>
+		</div>
+		<div class="video-section">
+			<h3>AI动作片（16:9）</h3>
+			<video class="video-16-9" src="./images/video1.mp4" controls playsinline></video>
+		</div>
+		<div class="video-section">
+			<h3>AI舞蹈短片（16:9）</h3>
+			<video class="video-16-9" src="./images/video2.mp4" controls playsinline></video>
+		</div>
+
+		<!-- ========== 底部联系+版权 ========== -->
+		<footer style="margin-top:60px;">
+			<hr />
+			<h3>微信联系</h3>
+			<div style="margin:20px auto;">
+				<img src="./images/wechat.jpg" alt="微信二维码"
+					style="width:220px; max-width:90%; border-radius:8px; display:block; margin:0 auto;">
+			</div>
+			<hr />
+			<ul id="copyright" style="list-style:none; padding:0; text-align:center; margin-top:30px;">
+				<li>&copy; 陈佳敏 - 个人作品集 保留所有权利</li>
+				<li>设计: HTML5UP</li>
+			</ul>
+		</footer>
+	</div>
+</article>
+
+<!-- ========== 轮播JS ========== -->
+<script>
+function startSliders() {
+	let sliders = document.querySelectorAll('.slider');
+	sliders.forEach((slider) => {
+		let slides = slider.querySelectorAll('.slide');
+		let index = 0;
+		function showSlide() {
+			slides.forEach(s => s.style.display = 'none');
+			slides[index].style.display = 'block';
+			index = (index + 1) % slides.length;
+		}
+		showSlide();
+		setInterval(showSlide, 2800);
+	});
+}
+window.onload = startSliders;
+</script>
+
+<script src="./assets/js/jquery.min.js"></script>
+<script src="./assets/js/jquery.scrolly.min.js"></script>
+<script src="./assets/js/browser.min.js"></script>
+<script src="./assets/js/breakpoints.min.js"></script>
+<script src="./assets/js/util.js"></script>
+<script src="./assets/js/main.js"></script>
+
+<!-- ========== 捕梦网+花朵特效 ========== -->
 <canvas id="flowerCanvas" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:1;pointer-events:none;"></canvas>
-
-<!-- 右下角收集计数（悬浮不遮挡） -->
 <div id="collectCount" style="position:fixed;bottom:30px;right:30px;background:rgba(255,255,255,0.95);padding:10px 16px;border-radius:50px;color:#e594b7;font-weight:bold;font-size:14px;pointer-events:none;z-index:9999;box-shadow:0 3px 12px rgba(0,0,0,0.15);">🎀 收集花朵：0</div>
 
 <script>
-// ===================== 1. 核心配置（可自定义） =====================
 const config = {
-  dreamcatcherSize: 45,  // 捕梦网鼠标大小（45px适中，不挡内容）
-  flowerNum: 25,         // 漂浮花朵数量
-  collectRange: 110,     // 收集判定范围
-  flowerColors: ['#f48fb1', '#f8c8c8', '#fdeeee', '#e594b7'], // 花朵配色（匹配你的粉色系）
-  dreamcatcherColors: {  // 捕梦网配色（温柔浅色系）
-    ring: '#d4b891',     // 圆环色
-    web: '#f8c8c8',      // 网绳色
-    feather: '#f48fb1'   // 羽毛色
-  }
+	dreamcatcherSize:45, flowerNum:25, collectRange:110,
+	flowerColors:['#f48fb1','#f8c8c8','#fdeeee','#e594b7'],
+	dreamcatcherColors:{ring:'#d4b891',web:'#f8c8c8',feather:'#f48fb1'}
 };
-
-// ===================== 2. 自定义捕梦网鼠标（核心：不影响点击） =====================
-// 创建捕梦网鼠标元素（仅视觉，不拦截点击）
-const dreamcatcherCursor = document.createElement('div');
-dreamcatcherCursor.id = 'customDreamcatcherCursor';
-dreamcatcherCursor.style.cssText = `
-  position: fixed;
-  width: ${config.dreamcatcherSize}px;
-  height: ${config.dreamcatcherSize}px;
-  pointer-events: none; /* 关键：不拦截任何点击事件 */
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  opacity: 1;
-`;
-// 捕梦网SVG（温柔风，适配粉色系）
-dreamcatcherCursor.innerHTML = `
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="${config.dreamcatcherSize}" height="${config.dreamcatcherSize}">
-  <!-- 捕梦网圆环 -->
-  <circle cx="25" cy="25" r="20" fill="none" stroke="${config.dreamcatcherColors.ring}" stroke-width="2"/>
-  <!-- 捕梦网内网（交叉线条） -->
-  <path d="M25 5 L25 45 M5 25 L45 25 M12 12 L38 38 M12 38 L38 12" 
-        fill="none" stroke="${config.dreamcatcherColors.web}" stroke-width="1" opacity="0.8"/>
-  <circle cx="25" cy="25" r="5" fill="${config.dreamcatcherColors.web}" opacity="0.9"/>
-  <!-- 羽毛装饰 -->
-  <path d="M25 45 Q23 55 25 60 Q27 55 25 45" fill="${config.dreamcatcherColors.feather}" opacity="0.8"/>
-  <path d="M22 48 Q20 58 22 63 Q24 58 22 48" fill="${config.dreamcatcherColors.feather}" opacity="0.7"/>
-  <path d="M28 48 Q30 58 28 63 Q26 58 28 48" fill="${config.dreamcatcherColors.feather}" opacity="0.7"/>
-</svg>
-`;
+const dreamcatcherCursor=document.createElement('div');
+dreamcatcherCursor.id='customDreamcatcherCursor';
+dreamcatcherCursor.style.cssText=`position:fixed;width:${config.dreamcatcherSize}px;height:${config.dreamcatcherSize}px;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:opacity 0.2s ease,transform 0.2s ease;opacity:1;`;
+dreamcatcherCursor.innerHTML=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="${config.dreamcatcherSize}" height="${config.dreamcatcherSize}"><circle cx="25" cy="25" r="20" fill="none" stroke="${config.dreamcatcherColors.ring}" stroke-width="2"/><path d="M25 5 L25 45 M5 25 L45 25 M12 12 L38 38 M12 38 L38 12" fill="none" stroke="${config.dreamcatcherColors.web}" stroke-width="1" opacity="0.8"/><circle cx="25" cy="25" r="5" fill="${config.dreamcatcherColors.web}" opacity="0.9"/><path d="M25 45 Q23 55 25 60 Q27 55 25 45" fill="${config.dreamcatcherColors.feather}" opacity="0.8"/><path d="M22 48 Q20 58 22 63 Q24 58 22 48" fill="${config.dreamcatcherColors.feather}" opacity="0.7"/><path d="M28 48 Q30 58 28 63 Q26 58 28 48" fill="${config.dreamcatcherColors.feather}" opacity="0.7"/></svg>`;
 document.body.appendChild(dreamcatcherCursor);
-
-// 隐藏原生鼠标（仅视觉隐藏，点击功能保留）
-const hideNativeCursor = document.createElement('style');
-hideNativeCursor.textContent = `
-  body { cursor: none !important; }
-  /* 关键：视频/图片/按钮等可点击元素，鼠标移上去时捕梦网半透，提示可点击 */
-  video, img, a, button, .clickable {
-    cursor: pointer !important;
-  }
-  #customDreamcatcherCursor[hover-over-clickable] {
-    opacity: 0.7;
-  }
-`;
+const hideNativeCursor=document.createElement('style');
+hideNativeCursor.textContent=`body{cursor:none !important;}video,img,a,button,.clickable{cursor:pointer !important;}#customDreamcatcherCursor[hover-over-clickable]{opacity:0.7;}`;
 document.head.appendChild(hideNativeCursor);
-
-// 鼠标跟随（精准，无偏移）
-let mouseX = 0, mouseY = 0;
-document.addEventListener('mousemove', (e) => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-  dreamcatcherCursor.style.left = `${mouseX}px`;
-  dreamcatcherCursor.style.top = `${mouseY}px`;
-
-  // 检测鼠标是否在可点击元素上（优化体验）
-  const target = document.elementFromPoint(e.clientX, e.clientY);
-  if (target && (target.tagName === 'VIDEO' || target.tagName === 'IMG' || target.tagName === 'A' || target.tagName === 'BUTTON' || target.classList.contains('clickable'))) {
-    dreamcatcherCursor.setAttribute('hover-over-clickable', 'true');
-  } else {
-    dreamcatcherCursor.removeAttribute('hover-over-clickable');
-  }
-});
-
-// ===================== 3. 漂浮花朵类 =====================
-class FloatingFlower {
-  constructor() {
-    this.reset();
-  }
-
-  // 初始化/重置花朵位置
-  reset() {
-    this.x = Math.random() * window.innerWidth;
-    this.y = Math.random() * -200 - 50;
-    this.size = Math.random() * 8 + 6;
-    this.speedY = Math.random() * 0.8 + 0.3;
-    this.speedX = Math.random() * 0.5 - 0.25;
-    this.rotate = Math.random() * 360;
-    this.rotateSpeed = Math.random() * 0.6 - 0.3;
-    this.color = config.flowerColors[Math.floor(Math.random() * config.flowerColors.length)];
-    this.collected = false;
-    this.opacity = Math.random() * 0.5 + 0.4;
-  }
-
-  // 绘制花朵（简化版，温柔不抢眼）
-  draw(ctx) {
-    if (this.collected) return;
-    ctx.save();
-    ctx.translate(this.x, this.y);
-    ctx.rotate((this.rotate * Math.PI) / 180);
-    ctx.globalAlpha = this.opacity;
-
-    // 画花瓣（6瓣花）
-    for (let i = 0; i < 6; i++) {
-      ctx.beginPath();
-      ctx.ellipse(0, this.size, this.size * 0.4, this.size, i * Math.PI / 3, 0, Math.PI * 2);
-      ctx.fillStyle = this.color;
-      ctx.fill();
-    }
-
-    // 花心
-    ctx.beginPath();
-    ctx.arc(0, 0, this.size * 0.3, 0, Math.PI * 2);
-    ctx.fillStyle = '#fff';
-    ctx.fill();
-
-    ctx.restore();
-  }
-
-  // 更新花朵状态
-  update() {
-    if (this.collected) return;
-
-    // 漂浮动画
-    this.y += this.speedY;
-    this.x += this.speedX;
-    this.rotate += this.rotateSpeed;
-
-    // 超出屏幕重置
-    if (this.y > window.innerHeight + 20) this.reset();
-
-    // 收集判定（距离计算）
-    const dx = this.x - mouseX;
-    const dy = this.y - mouseY;
-    if (dx * dx + dy * dy < config.collectRange * config.collectRange && !this.collected) {
-      this.collect();
-    }
-  }
-
-  // 收集花朵（反馈+计数）
-  collect() {
-    this.collected = true;
-    collectCount++;
-    document.getElementById('collectCount').textContent = `🎀 收集花朵：${collectCount}`;
-    
-    // 收集反馈：捕梦网轻微旋转+放大
-    dreamcatcherCursor.style.transform = 'translate(-50%, -50%) scale(1.2) rotate(10deg)';
-    setTimeout(() => {
-      dreamcatcherCursor.style.transform = 'translate(-50%, -50%) scale(1) rotate(0deg)';
-    }, 300);
-
-    // 3秒后重置花朵
-    setTimeout(() => this.reset(), 3000);
-  }
-}
-
-// ===================== 4. 画布初始化 + 花朵生成 =====================
-const canvas = document.getElementById('flowerCanvas');
-const ctx = canvas.getContext('2d');
-let flowers = [];
-let collectCount = 0;
-
-// 适配窗口大小
-function resizeCanvas() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
-
-// 生成漂浮花朵
-for (let i = 0; i < config.flowerNum; i++) {
-  flowers.push(new FloatingFlower());
-}
-
-// ===================== 5. 动画循环 =====================
-function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  
-  // 更新+绘制所有花朵
-  flowers.forEach(flower => {
-    flower.update();
-    flower.draw(ctx);
-  });
-
-  requestAnimationFrame(animate);
-}
+let mouseX=0,mouseY=0;
+document.addEventListener('mousemove',(e)=>{mouseX=e.clientX;mouseY=e.clientY;dreamcatcherCursor.style.left=`${mouseX}px`;dreamcatcherCursor.style.top=`${mouseY}px`;const target=document.elementFromPoint(e.clientX,e.clientY);if(target&&(target.tagName==='VIDEO'||target.tagName==='IMG'||target.tagName==='A'||target.tagName==='BUTTON'||target.classList.contains('clickable'))){dreamcatcherCursor.setAttribute('hover-over-clickable','true');}else{dreamcatcherCursor.removeAttribute('hover-over-clickable');}});
+class FloatingFlower{constructor(){this.reset();}reset(){this.x=Math.random()*window.innerWidth;this.y=Math.random()*-200-50;this.size=Math.random()*8+6;this.speedY=Math.random()*0.8+0.3;this.speedX=Math.random()*0.5-0.25;this.rotate=Math.random()*360;this.rotateSpeed=Math.random()*0.6-0.3;this.color=config.flowerColors[Math.floor(Math.random()*config.flowerColors.length)];this.collected=false;this.opacity=Math.random()*0.5+0.4;}draw(ctx){if(this.collected)return;ctx.save();ctx.translate(this.x,this.y);ctx.rotate((this.rotate*Math.PI)/180);ctx.globalAlpha=this.opacity;for(let i=0;i<6;i++){ctx.beginPath();ctx.ellipse(0,this.size,this.size*0.4,this.size,i*Math.PI/3,0,Math.PI*2);ctx.fillStyle=this.color;ctx.fill();}ctx.beginPath();ctx.arc(0,0,this.size*0.3,0,Math.PI*2);ctx.fillStyle='#fff';ctx.fill();ctx.restore();}update(){if(this.collected)return;this.y+=this.speedY;this.x+=this.speedX;this.rotate+=this.rotateSpeed;if(this.y>window.innerHeight+20)this.reset();const dx=this.x-mouseX;const dy=this.y-mouseY;if(dx*dx+dy*dy<config.collectRange*config.collectRange&&!this.collected){this.collect();}}collect(){this.collected=true;collectCount++;document.getElementById('collectCount').textContent=`🎀 收集花朵：${collectCount}`;dreamcatcherCursor.style.transform='translate(-50%,-50%) scale(1.2) rotate(10deg)';setTimeout(()=>{dreamcatcherCursor.style.transform='translate(-50%,-50%) scale(1) rotate(0deg)';},300);setTimeout(()=>this.reset(),3000);}}
+const canvas=document.getElementById('flowerCanvas');const ctx=canvas.getContext('2d');let flowers=[];let collectCount=0;
+function resizeCanvas(){canvas.width=window.innerWidth;canvas.height=window.innerHeight;}
+resizeCanvas();window.addEventListener('resize',resizeCanvas);
+for(let i=0;i<config.flowerNum;i++){flowers.push(new FloatingFlower());}
+function animate(){ctx.clearRect(0,0,canvas.width,canvas.height);flowers.forEach(flower=>{flower.update();flower.draw(ctx);});requestAnimationFrame(animate);}
 animate();
+document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelAnimationFrame(animate);}else{animate();}});
+</script>
 
-// ===================== 6. 兼容处理（防止异常） =====================
-// 页面失去焦点时暂停动画，减少性能消耗
-document.addEventListener('visibilitychange', () => {
-  if (document.hidden) {
-    cancelAnimationFrame(animate);
-  } else {
-    animate();
-  }
+<!-- ========== 【核心修复】加载动画JS逻辑 ========== -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+	const loader = document.getElementById('loader');
+	const progressBar = document.getElementById('progressBar');
+	const loaderText = document.getElementById('loaderText');
+
+	let progress = 0;
+	const interval = setInterval(() => {
+		if (progress < 90) {
+			progress += Math.random() * 3.5;
+			progressBar.style.width = Math.min(progress, 90) + '%';
+		}
+	}, 100);
+
+	window.addEventListener('load', () => {
+		clearInterval(interval);
+		progressBar.style.width = '100%';
+		loaderText.textContent = '加载完成✨';
+		setTimeout(() => {
+			loader.classList.add('hidden');
+		}, 1000);
+	});
+
+	setTimeout(() => {
+		if (!loader.classList.contains('hidden')) {
+			clearInterval(interval);
+			progressBar.style.width = '100%';
+			loader.classList.add('hidden');
+		}
+	}, 10000);
 });
 </script>
-	</body>
+
+</body>
 </html>
